@@ -147,20 +147,23 @@ c = Circle(10, 0, 10)
 c1 = Circle(100, 100, 5)
 
 p = Parallelogram(1, 2, 20, 30, 45)
-p.x
+
 p1 = Parallelogram(1, 2, 20, 30, 45)
 str(p1)
 
 t = Triangle(2, 5, 45, 65)
 t1 = Triangle(4, 6, 89, 90)
 
-scene = Scene()
-scene.add_figure(r)
-scene.add_figure(r1)
-scene.add_figure(r2)
-scene.add_figure(c)
-scene.add_figure(c1)
-scene.add_figure(t)
-scene.add_figure(t1)
+if __name__ == "__main__":
 
-print(scene.total_square())
+    p.x
+    scene = Scene()
+    scene.add_figure(r)
+    scene.add_figure(r1)
+    scene.add_figure(r2)
+    scene.add_figure(c)
+    scene.add_figure(c1)
+    scene.add_figure(t)
+    scene.add_figure(t1)
+
+    print(scene.total_square())
