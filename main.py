@@ -16,7 +16,6 @@ from datetime import datetime
 from database_handler import execute_query
 from utils import format_records
 
-
 app = Flask(__name__)
 
 
@@ -48,7 +47,6 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 
-
 # ДЗ 4. Flask + SQL
 
 @app.route('/order_price')
@@ -72,7 +70,6 @@ def order_price(country="BillingCountry"):
         return format_records(records)
 
 
-
 @app.route('/get_all_info_about_track')
 @use_kwargs(
     {
@@ -88,8 +85,5 @@ def get_all_info_about_track(track_id="tracks.TrackId"):
     return format_records(records)
 
 
-
-
 if __name__ == "__main__":
     app.run(port=5001, debug=True)
-
