@@ -5,6 +5,7 @@ import math
 from colors import bcolors
 
 class frange:
+
     def __init__(self, A, L=None, D=None):
         self.A = A
         self.L = L
@@ -36,19 +37,10 @@ class frange:
         return self
 
 
-assert (list(frange(5)) == [0, 1, 2, 3, 4])
-assert (list(frange(2, 5)) == [2, 3, 4])
-assert (list(frange(2, 10, 2)) == [2, 4, 6, 8])
-assert (list(frange(10, 2, -2)) == [10, 8, 6, 4])
-assert (list(frange(2, 5.5, 1.5)) == [2, 3.5, 5])
-assert (list(frange(1, 5)) == [1, 2, 3, 4])
-assert (list(frange(0, 5)) == [0, 1, 2, 3, 4])
-assert (list(frange(0, 0)) == [])
-assert (list(frange(100, 0)) == [])
 
-print('SUCCESS!')
 
 class colorizer:
+
     def __init__(self, color='red'):
         self.color = getattr(bcolors, color)
 
@@ -60,9 +52,7 @@ class colorizer:
     def __exit__(self, exc_type, exc_val, exc_tb):
         print(f"{bcolors.ENDC}")
 
-with colorizer(color="green"):
-    print('printed in green')
-print('printed in default color')
+
 
 
 
@@ -139,23 +129,40 @@ class Scene:
         pass
 
 
-r = Rectangle(0, 0, 10, 20)
-r1 = Rectangle(10, 0, -10, 20)
-r2 = Rectangle(0, 20, 100, 20)
 
-c = Circle(10, 0, 10)
-c1 = Circle(100, 100, 5)
-
-p = Parallelogram(1, 2, 20, 30, 45)
-
-p1 = Parallelogram(1, 2, 20, 30, 45)
-str(p1)
-
-t = Triangle(2, 5, 45, 65)
-t1 = Triangle(4, 6, 89, 90)
 
 if __name__ == "__main__":
 
+    assert (list(frange(5)) == [0, 1, 2, 3, 4])
+    assert (list(frange(2, 5)) == [2, 3, 4])
+    assert (list(frange(2, 10, 2)) == [2, 4, 6, 8])
+    assert (list(frange(10, 2, -2)) == [10, 8, 6, 4])
+    assert (list(frange(2, 5.5, 1.5)) == [2, 3.5, 5])
+    assert (list(frange(1, 5)) == [1, 2, 3, 4])
+    assert (list(frange(0, 5)) == [0, 1, 2, 3, 4])
+    assert (list(frange(0, 0)) == [])
+    assert (list(frange(100, 0)) == [])
+
+    print('SUCCESS!')
+
+    with colorizer(color="green"):
+        print('printed in green')
+    print('printed in default color')
+
+    r = Rectangle(0, 0, 10, 20)
+    r1 = Rectangle(10, 0, -10, 20)
+    r2 = Rectangle(0, 20, 100, 20)
+
+    c = Circle(10, 0, 10)
+    c1 = Circle(100, 100, 5)
+
+    p = Parallelogram(1, 2, 20, 30, 45)
+
+    p1 = Parallelogram(1, 2, 20, 30, 45)
+
+    t = Triangle(2, 5, 45, 65)
+    t1 = Triangle(4, 6, 89, 90)
+    str(p1)
     p.x
     scene = Scene()
     scene.add_figure(r)
