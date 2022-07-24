@@ -43,5 +43,6 @@ class Rector(Teacher, Professor, Dean):
         # implementation
         pass
 
-boris = Rector(name="Борис", students=2000, salary=3000)
-boris.teach()
+if __name__ == "__main__":
+    boris = Rector(name="Борис", students=2000, salary=3000)
+    boris.teach()

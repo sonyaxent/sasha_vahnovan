@@ -109,15 +109,14 @@ class Teacher:
 
 marina = BioStudent(name="Марина", laziness=5, bio_skill=17)
 
-marina.set_personal_data("blue", "4-", "Житомир")
+
 
 marko = MathStudent(name="Марко", laziness=50, math_skill=14.4)
-marko.set_personal_data("green", "4-", "Житомир")
+
 
 vladimir = Teacher(name="Володимир", students=25, salary=4)
-vladimir.set_personal_data("green", "3-", "Одеса")
+
 petro = Student(name="Петро", laziness=45, skill=15)
-petro.set_personal_data("brown", "2+", "Київ")
 
 auditorium_3 = [marina, marko, vladimir, petro]
 
@@ -138,8 +137,17 @@ def find_from_Jitomir(auditorium):
     print(f"From Jitomir = {from_odessa}")
 
 
-find_from_Odesa(auditorium_3)
-find_from_Jitomir(auditorium_3)
 
-for  i in auditorium_3:
-    print(f"Персональні дані {i.name}: {i.get_personal_data()}")
+
+
+if __name__ == "__main__":
+    marina.set_personal_data("blue", "4-", "Житомир")
+    marko.set_personal_data("green", "4-", "Житомир")
+    vladimir.set_personal_data("green", "3-", "Одеса")
+    petro.set_personal_data("brown", "2+", "Київ")
+    find_from_Odesa(auditorium_3)
+    find_from_Jitomir(auditorium_3)
+    for i in auditorium_3:
+        print(f"Персональні дані {i.name}: {i.get_personal_data()}")
+
+

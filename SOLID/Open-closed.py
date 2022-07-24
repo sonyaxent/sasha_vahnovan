@@ -86,15 +86,19 @@ class MathStudent(Student):
 
 
 marina = BioStudent(name="Марина", laziness=5, bio_skill=17)
-marina.pass_exam()
-marina.go_to_lectures()
+
 
 marko = MathStudent(name="Марко", laziness=50, math_skill=14.4)
-marko.pass_exam()
-marko.go_to_lectures()
+
 
 
 
 petro = Student(name="Петро", laziness=45, skill=15)
 
-petro.pass_exam()
+
+if __name__ == "__main__":
+    marina.pass_exam()
+    marina.go_to_lectures()
+    marko.pass_exam()
+    marko.go_to_lectures()
+    petro.pass_exam()

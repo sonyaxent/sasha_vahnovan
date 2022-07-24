@@ -30,4 +30,7 @@ alya = Student("Аля")
 list_of_people = [petro, wolodymyr, marina, evhen, alya]
 
 group4 = Group(4, 5)
-group4.lecture_check_in(list_of_people)
+
+
+if __name__ == "__main__":
+    group4.lecture_check_in(list_of_people)

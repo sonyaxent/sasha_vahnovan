@@ -64,13 +64,14 @@ class DataBaseSaver:
 
 
 petro = Student(name="Петро", laziness=45, skill=15)
-petro.go_to_lectures()
+
 
 vladimir = Teacher(name="Володимир", students=25, salary=4)
 
-
-data_service = DataBaseSaver()
-data_service.save(petro, "students.txt")
-data_service.save(vladimir, "teachers.txt")
+if __name__ == "__main__":
+    petro.go_to_lectures()
+    data_service = DataBaseSaver()
+    data_service.save(petro, "students.txt")
+    data_service.save(vladimir, "teachers.txt")
 
 
